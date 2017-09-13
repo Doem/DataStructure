@@ -7,7 +7,7 @@ using namespace std;
 #define PAIR pair<int, int>
 
 /*
-	1051522 HW1 Final
+1051522 HW1 Final
 */
 
 struct Card {
@@ -58,7 +58,7 @@ int CheckScore(Player &p) {
 		straight = true;
 
 	//§PÂ_¬O­þºØ
-	if (flush == true && straight == true) 
+	if (flush == true && straight == true)
 		return 9;
 	else if (straight == true)
 		return 5;
@@ -72,11 +72,11 @@ int Compare(Player &W, Player &B) {
 	if (W.score != B.score)
 		return (W.score > B.score);
 	else {
-			for (auto it1 = B.card.orderCard.rbegin(), it2 = W.card.orderCard.rbegin(); it1 != B.card.orderCard.rend(); ++it1, ++it2) {
-				if ((*it1).second > (*it2).second) return 0;
-				if ((*it1).second < (*it2).second) return 1;
-			}
-			return 2;
+		for (auto it1 = B.card.orderCard.rbegin(), it2 = W.card.orderCard.rbegin(); it1 != B.card.orderCard.rend(); ++it1, ++it2) {
+			if ((*it1).second > (*it2).second) return 0;
+			if ((*it1).second < (*it2).second) return 1;
+		}
+		return 2;
 	}
 }
 
