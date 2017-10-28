@@ -440,6 +440,7 @@ ListIterator< T > list< T >::insert(iterator position, const T val) {
 // Removes from the list container the element at the specified position.
 template< typename T >
 ListIterator< T > list< T >::erase(iterator position) {
+	--mySize;
 	ListNode<T>* oldNode = position.ptr;
 	oldNode->next->prev = oldNode->prev;
 	position.ptr = oldNode->prev->next = oldNode->next;
